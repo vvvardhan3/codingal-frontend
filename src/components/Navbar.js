@@ -62,7 +62,7 @@ function Navbar() {
         <div className="text-gray-500 font-bold">{formatTime()}</div>
         <button
           onClick={openModal}
-          className="m-5 px-2 w-[120px] py-2 rounded-md text-white bg-custom-orange cursor-pointer"
+          className="m-5 px-2 w-[120px] py-2 rounded-md text-white bg-custom-orange hover:bg-orange-500 cursor-pointer"
         >
           End class
         </button>
