@@ -34,13 +34,3 @@ Explore the application to see different functionalities in action:
 Navigate to /posts to see the posts loaded with infinite scrolling.
 Check different responsive layouts by resizing your browser window.
 
-## Contact
-Your Name - Vishnu Vardhan Vankayalapati
-
-Project Link: https://github.com/vvvardhan3/codingal-frontend
-
-
-## Acknowledgements
-* React Icons
-* Axios
-* React Infinite Scroll Component
