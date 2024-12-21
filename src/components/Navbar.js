@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import VerticalLine from "./VerticalLine";
 import EndClassModal from "./EndClassModal";
+import HamBurger from "./HamBurger";
+import { ReactComponent as MobilleIcon } from '../mobile_logo.svg';
 
 function Navbar() {
   const [seconds, setSeconds] = useState(600);
@@ -48,30 +50,34 @@ function Navbar() {
   return (
     <>
       <div className="sticky top-0 flex h-16 z-30 w-full bg-white justify-between items-center">
-        <div className="flex items-center w-full px-5 cursor-pointer space-x-4">
+        <div className="flex items-center w-full md:px-5 cursor-pointer space-x-4 ">
           <img
-            className="h-10 rounded-md"
+            className="h-10 rounded-md hidden md:block"
             src={require("../Logo.jpg")}
             alt="logo"
           />
+          <MobilleIcon className="h-10 sm:hidden" />
           <VerticalLine />
-          <div className="text-gray-500 text-sm font-bold">
+          <div className="text-gray-500 text-sm font-bold hidden md:block">
             Trial Lesson [Grade 1-3]
           </div>
         </div>
-        <div className="text-gray-500 font-bold">{formatTime()}</div>
+        <div className="text-gray-500 font-bold hidden md:block">{formatTime()}</div>
         <button
           onClick={openModal}
-          className="m-5 px-2 w-[120px] py-2 rounded-md text-white bg-custom-orange hover:bg-orange-500 cursor-pointer"
+          className="m-5 px-2 w-[120px] py-2 rounded-md text-white bg-custom-orange hover:bg-orange-500 cursor-pointer hidden md:block "
         >
           End class
         </button>
+        <HamBurger/>
       </div>
+     
       <EndClassModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onEndClass={handleEndClass}
       />
+     
     </>
   );
 }
