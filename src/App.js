@@ -1,12 +1,21 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import Posts from './components/Posts';
+import Home from './pages/Home';
+import Posts from './pages/Posts';
 
 function App() {
   return (
    <>
-   <Navbar/>
-   <Posts/>
+   <BrowserRouter>
+   <Routes>
+   <Route index element={<Home/>} />
+   <Route element={<Home/>} path="/home" />
+   <Route element={<Posts/>} path="/posts" />
+
+   </Routes>
+   
+   </BrowserRouter>
+   
    </>
   );
 }

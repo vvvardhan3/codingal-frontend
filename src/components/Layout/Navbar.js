@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import VerticalLine from "./VerticalLine";
-import EndClassModal from "./EndClassModal";
+import VerticalLine from "../Layout/VerticalLine";
+import EndClassModal from "../modal/EndClassModal";
 import HamBurger from "./HamBurger";
-import { ReactComponent as MobilleIcon } from '../mobile_logo.svg';
+import { ReactComponent as MobilleIcon } from '../../assets/images/mobile_logo.svg';
 
 function Navbar() {
   const [seconds, setSeconds] = useState(600);
@@ -11,7 +11,7 @@ function Navbar() {
   const [wasTimerActive, setWasTimerActive] = useState(false); 
 
   useEffect(() => {
-    let interval = null;
+    let interval;
     if (timerActive) {
       interval = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
@@ -51,9 +51,10 @@ function Navbar() {
     <>
       <div className="sticky top-0 flex h-16 z-30 w-full bg-white justify-between items-center">
         <div className="flex items-center w-full md:px-5 cursor-pointer space-x-4 ">
+          
           <img
             className="h-10 rounded-md hidden md:block"
-            src={require("../Logo.jpg")}
+            src={require("../../assets/images/Logo.jpg")}
             alt="logo"
           />
           <MobilleIcon className="h-10 sm:hidden" />
@@ -63,12 +64,14 @@ function Navbar() {
           </div>
         </div>
         <div className="text-gray-500 font-bold hidden md:block">{formatTime()}</div>
+       
         <button
           onClick={openModal}
           className="m-5 px-2 w-[120px] py-2 rounded-md text-white bg-custom-orange hover:bg-orange-500 cursor-pointer hidden md:block "
         >
           End class
         </button>
+       
         <HamBurger/>
       </div>
      
