@@ -16,6 +16,9 @@ function HamBurger() {
               <a href="/">Home</a>
             </li>
             <li className="p-4 border-b border-gray-200 w-full text-center">
+              <a href="/posts">Posts</a>
+            </li>
+            <li className="p-4 border-b border-gray-200 w-full text-center">
               End Class
             </li>
           

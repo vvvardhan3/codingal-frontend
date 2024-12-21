@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Icon } from '../mobile_logo.svg';
+import { ReactComponent as Icon } from '../../assets/images/mobile_logo.jpg';
 
 function MobilleIcon() {
   return (
